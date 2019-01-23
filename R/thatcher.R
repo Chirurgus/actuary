@@ -31,3 +31,11 @@ table.tatcher <- function(qx, ages) {
     res <- sum(diff^2);
     res;
   }
+
+  default.values = c(100, logit(0.01), 0);
+  optim.res <- optim(default.values, sq.dist,  mx.obs= mx, ages.obs= ages);
+
+  par <- with(optim.res, c(par[1], logit.inv(par[2]), par[3]));
+  mx.hat <- unname(sapply(ages, function(a) mu.tatcher(a, par[1], par[2], par[3])))
+  data.frame(age=ages ,qx= mx.hat/(1+mx.hat))
+}

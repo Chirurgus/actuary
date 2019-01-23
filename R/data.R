@@ -1,49 +1,17 @@
-# Created by Oleksandr Sorochynskyi
-# On 21 Jan, 2019
+# Created by Oleksandr Sorochyskyi
+# On 23 Jan, 2019
 
-#' French reference life table.
+#' French life table, TH 00-02
 #'
-#' TH 00-02 - Table Hommes 00-02
+#' A french lifetable. Follows a cohort of 100 000 individuals.
 #'
-#' @docType data
-#'
-#' @usage data(grav)
-#'
-#' @format Comma seperated .txt file
-#'
-#' @keywords datasets, lifetable
-#'
-#' @examples
-#' data(th0002)
-#' qx <- th0002$qx
-#' ages <- grav$age
-#' \donttest{iplotCurves(phe, times)}
+#' @usage data(thf0002)
+#' @format A data frame with 113 rows (up to 112 years) and 5 variables:
+#' \describe{
+#'   \item{age}{Age for quantities of other columns}
+#'   \item{f.qx}{Probability of death within a year for females}
+#'   \item{h.qx}{Probability of death within a year for males}
+#'   \item{f.lx}{Number of female survivors form the the original 100 000 cohort}
+#'   \item{h.lx}{Number of male survivors form the the original 100 000 cohort}
+#' }
 "thf0002"
-
-
-#' Arabidopsis QTL data on gravitropism
-#'
-#' Data from a QTL experiment on gravitropism in
-#' Arabidopsis, with data on 162 recombinant inbred lines (Ler x
-#' Cvi). The outcome is the root tip angle (in degrees) at two-minute
-#' increments over eight hours.
-#'
-#' @docType data
-#'
-#' @usage data(grav)
-#'
-#' @format An object of class \code{"cross"}; see \code{\link[qtl]{read.cross}}.
-#'
-#' @keywords datasets
-#'
-#' @references Moore et al. (2013) Genetics 195:1077-1086
-#' (\href{https://www.ncbi.nlm.nih.gov/pubmed/23979570}{PubMed})
-#'
-#' @source \href{https://phenome.jax.org/projects/Moore1b}{QTL Archive}
-#'
-#' @examples
-#' data(grav)
-#' times <- attr(grav, "time")
-#' phe <- grav$pheno
-#' \donttest{iplotCurves(phe, times)}
-"grav"

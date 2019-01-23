@@ -7,13 +7,16 @@
 hazard.rate(p.death)
 }
 \arguments{
-\item{p.death}{The probability of death}
+\item{p.death}{Vector of probabilities of death}
 }
 \description{
 Calculate the hazard rate from the probability of death. Under the asumption of constant hazard rate.
 }
 \examples{
 mu <- hazard.rate(qx)
+}
+\references{
+
 }
 \keyword{hazard_rate,}
 \keyword{mu,}
