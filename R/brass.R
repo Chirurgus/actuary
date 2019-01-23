@@ -16,7 +16,7 @@ brass.table <- function(qx, qx.ref) {
   y.hat <- predict.lm(brass.lm,
                        newdata= logit.transform,
                        type= "response",
-                       interval = "confidence",
+                       interval = "predict",
                        level= 0.95)
   qx.hat <- data.frame(logit.inv(y.hat))
   age <- 1:nrow(qx.hat) - 1
